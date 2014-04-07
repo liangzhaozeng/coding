@@ -3,7 +3,27 @@ package algorithm.lc;
 import java.util.Arrays;
 
 public class ScrambleString {
-  
+  /*
+  dp[i][j][k] 代表了s1从i开始，s2从j开始，长度为k的两个substring是否为scramble
+string。
+
+有三种情况需要考虑：
+
+1. 如果两个substring相等的话，则为true
+
+2. 如果两个substring中间某一个点，左边的substrings为scramble string，
+同时右边的substrings也为scramble string，则为true
+
+3. 如果两个substring中间某一个点，s1左边的substring和s2右边的substring为scramble
+string, 同时s1右边substring和s2左边的substring也为scramble
+string，则为true
+
+
+
+  */
+
+
+
   public class Solution {
  	public boolean isScramble(String s1, String s2) {
     int n=s1.length();
